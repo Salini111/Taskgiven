@@ -1,0 +1,255 @@
+package com.wrapper;
+ 
+public class StringEx {​​​​
+ 
+    public static void main(String[] args) {​​​​
+        // TODO Auto-generated method s
+         char charArray[]= {​​​​'l','i','o','n'}​​​​;
+            String s=new String(charArray);
+            System.out.println(s);
+            String s0=new String(charArray,1,2);
+            System.out.println(s0);
+        String str=new String();
+        System.out.println(str);
+        String str1=null;
+        System.out.println(str1);
+        byte b[]= {​​​​97,99,102,98}​​​​;
+        String str2=new String(b);
+        System.out.println(str2);
+        System.out.println(str2.isEmpty());
+        String str4="devi";
+        System.out.println(str4.endsWith("i"));  
+         System.out.println(str4.substring(1));
+        String str3="krishnarani";
+         System.out.println(str3.replaceAll(str3, str2));
+        System.out.println(str3.codePointAt(4));
+        System.out.println(str3.charAt(3));
+        System.out.println(str3.codePointCount(0, 3));
+        System.out.println(str3.compareTo(str4));
+        System.out.println(str3.concat(str4));
+        System.out.println(str3.compareToIgnoreCase(str4));
+        System.out.println(str3.codePointBefore(3));
+        System.out.println(str3.toUpperCase());
+        String str5="heloohowru";
+        //System.out.println(str5.split("\\o",0));
+        System.out.println(str5.trim());
+        System.out.println(str5.trim()+"good");
+        System.out.println(str5.toString());
+        System.out.println(str5.length());
+        System.out.println(str5.contains(str4));
+        String str7=String.valueOf(str5);
+        System.out.println(str7+ "welcome");
+        System.out.println(str5.valueOf(str3));
+        String str6= "good morning";
+        System.out.println(str6.intern());
+        byte byteArray[] = {​​​​ ( byte ) 'g', ( byte ) 'e', ( byte ) 'o', ( byte ) 'a', ( byte ) 'r' }​​​​;
+        String s2=new String(byteArray);
+        String s1=new String(byteArray,1,2);
+        System.out.println(s1);
+        System.out.println(s2);
+      
+        
+    }​​​​
+    
+         
+}​​​​
+package com.wrapper;
+ 
+public class BuliderClass {​​​​
+ 
+     
+ 
+    public static void main(String[] args) {​​​​
+        // TODO Auto-generated method stub
+         StringBuilder sb = new StringBuilder(" hiigood morining "); 
+            System.out.println("Input: " + sb); 
+            sb.append(true); 
+            System.out.println("Output: " + sb); 
+            System.out.println(); 
+            StringBuilder sb1 = new StringBuilder(" nice movie-- "); 
+            System.out.println("Input: " + sb1); 
+            sb1.append(false); 
+            System.out.println("Output: " + sb1); 
+            // java.lang.StringBuilder.append(char a)
+            StringBuilder sbc = new StringBuilder(" pay welled"); 
+            System.out.println( sb); 
+            sbc.append('T'); 
+            System.out.println(" after"+ " appending = " + sbc); 
+            sbc= new StringBuilder(" gowri-"); 
+            System.out.println(sbc); 
+            sbc.append('#'); 
+            System.out.println("Result after appending = " + sbc); 
+            
+         // java.lang.StringBuilder.append(<em>char[] astr</em>) 
+            StringBuilder sbf = new StringBuilder("We are back  "); 
+            System.out.println(sbf); 
+            char[] astr = new char[]  {​​​​ 'F', 'O', 'L', 'k', 'S' }​​​​; 
+            sbf.append(astr); 
+            System.out.println("Result after"+ " appending = " + sbf); 
+            sbf = new StringBuilder("We are keep going -"); 
+             System.out.println(sbf); 
+             astr = new char[] {​​​​ 'a', 'b', 'c', 'd' }​​​​; 
+             sbf.append(astr); 
+             System.out.println("Result after appending = " + sbf); 
+             
+          // append(char[] cstr, int iset, int ilength) 
+             
+             StringBuilder sb0 = new StringBuilder("hii all"); 
+             System.out.println("String Builder "+ "before = " + sb0); 
+             char[] cstr = new char[]  {​​​​ 't', 'o', 'o', 'u', 'r', 'w', 'o', 'r','l','d' }​​​​; 
+             sb0.append(cstr, 0, 8); 
+             System.out.println("After appending String Builder = " + sb0); 
+              
+             
+          // java.lang.StringBuilder.append() 
+             
+             StringBuilder sbf6 = new StringBuilder("get ready "); 
+             System.out.println("String Builder = " + sbf6); 
+             CharSequence chSeq = "folks";  
+             sbf6.append(chSeq);     
+             System.out.println("After append = " + sbf6); 
+             
+          
+               StringBuilder sbf7=new StringBuilder("Hello ");  
+               sbf7.insert(1,"Java"); 
+               System.out.println(sbf7);
+               
+               StringBuilder sbf8=new StringBuilder("good keep itup");  
+               sbf8.replace(1,3,"Java");  
+               System.out.println(sbf8);
+               
+               StringBuilder sbf9=new StringBuilder("eat well man");  
+               sbf9.delete(1,3);  
+               System.out.println(sbf9);
+               
+               StringBuilder sbf10=new StringBuilder("nice person");  
+               sbf10.reverse();  
+               System.out.println(sbf10);
+               
+               StringBuilder sbf11=new StringBuilder();  
+               System.out.println(sbf11.capacity()); 
+               sbf11.append("hiiiii");  
+               System.out.println(sbf11.capacity());  
+               sbf11.append("tamil is my native language");  
+               System.out.println(sbf11.capacity());
+               
+               
+               StringBuilder sbf12=new StringBuilder();  
+               System.out.println(sbf12.capacity());
+               sbf12.append("Hiii");  
+               System.out.println(sbf12.capacity());  
+               sbf12.append("tamil is my native language");  
+               System.out.println(sbf12.capacity()); 
+               sbf12.ensureCapacity(10); 
+               System.out.println(sbf12);  
+               sbf12.ensureCapacity(50);
+               System.out.println(sbf12.capacity());
+               
+               StringBuilder sbf13=new StringBuilder();  
+ 
+              System.out.println(sbf13.capacity());  
+               sbf13.append("everyone");
+               System.out.println(sbf13.capacity());  
+               sbf13.append("listen to me");
+               System.out.println(sbf13.capacity()); 
+               
+               StringBuilder sbf14 = new StringBuilder("programming");
+               System.out.println("string = " + sbf14);
+               sbf14.appendCodePoint(74);
+               System.out.println("After appendCodePoint = " + sbf14);   
+               StringBuilder sbf15 = new StringBuilder("class ");
+               System.out.println("string = " + sbf15);
+               sbf15.append("point");
+               System.out.println("After append = " + sbf15);
+               sbf15 = new StringBuilder("1234 ");
+               System.out.println("string = " + sbf15);
+               sbf15.append("!#$%");
+               System.out.println("After append = " + sbf15);
+               
+               StringBuilder sbf16 = new StringBuilder("Hiii ");
+               System.out.println("String :- " + sbf16);
+        
+               Object Object = "treat";
+               sbf16.append(Object);
+        
+               System.out.println("String after append :- " + sbf16);
+               
+               StringBuilder sbf17 = new StringBuilder("Value:- ");
+               
+               long lng = 890000000;
+               sbf17.append(lng);
+               System.out.println(sbf17);
+               
+               StringBuffer sbf18 = new StringBuffer("wishing ");
+               
+               int number = 100;
+               System.out.println(sbf18.append(number));
+               
+               
+               StringBuffer sbf19 = new StringBuffer("racking ");
+               float num=(float) 3.14;
+               System.out.println(sbf19.append(num));
+               
+               
+               StringBuilder sbf20 = new StringBuilder("Value:- ");
+               double d = 66.00020;
+               sbf20.append(d);
+               System.out.println(sbf20);
+    }​​​​
+ 
+ 
+ 
+}​​​​
+package com.wrapper;
+ 
+public class StringBuf {​​​​
+ 
+    public static void main(String[] args) throws StringIndexOutOfBoundsException{​​​​
+        // TODO Auto-generated method stub
+StringBuffer sb= new StringBuffer("Sals");
+System.out.println(sb);
+System.out.println(sb.length());
+System.out.println(sb.capacity());
+StringBuffer sb1= new StringBuffer(60);
+System.out.println(sb1.capacity());
+String str="good";//immutable
+StringBuffer sb2= new StringBuffer(str);//mutable
+System.out.println(sb2);
+System.out.println(sb2.toString());  
+System.out.println(sb.append("Java"));//prints gowriJava 
+System.out.println(sb2.insert(1,"dhana"));
+String str1="good morning";
+StringBuffer sb3= new StringBuffer(str1);
+System.out.println(sb3.reverse());
+System.out.println(sb3.delete(1,6));
+System.out.println(sb3.deleteCharAt(1));
+System.out.println(sb3.replace(1,5,"vanakam"));
+System.out.println();
+char arr[] = {​​​​ 'i', 'r', 'o', 'n', 'm','a','n' }​​​​; 
+sb.insert(2, arr); 
+System.out.println(sb);
+System.out.println("Indexof");
+StringBuffer s7 = new StringBuffer("Hello Welcome"); 
+System.out.println("String: " + s7); 
+int index = s7.indexOf("For"); 
+System.out.println("index of 'For': "+ index); 
+System.out.println("TrimtoSize");
+StringBuffer s8 = new StringBuffer("good morning"); 
+s8.append("Contribute"); 
+System.out.println("Capacity before "+ "applying trimToSize() = " + s8.capacity()); 
+s8.trimToSize(); 
+System.out.println("String = " + s8.toString()); 
+System.out.println("Capacity after"+ " applying trimToSize() = "+ s8.capacity()); 
+System.out.println("Substring");
+StringBuffer s9  = new StringBuffer("tamilnadu"); 
+System.out.println("String contains = "+ s9); 
+System.out.println("SubSequence = "+ s9.substring(5)); 
+ 
+ 
+ 
+ 
+ 
+    }​​​​
+ 
+}​​​​
+ 
