@@ -1,0 +1,259 @@
+Table Creation:
+
+create table Employee ( Employee_id int primary key,First_name varchar(20) , Last_name varchar(25) , Email varchar(25) ,Phone_number varchar(20) , Hire_date date , Job_id varchar(10),Salary decimal(8,2),Manager_id int,Department_id int);
+
+
+Insert values in Tables
+
+insert into Employee(Employee_id, First_name, Last_name, Email, Phone_number, Hire_date, Job_id,Salary,Manager_id,Department_id)Values(210,'Janette', 'King', 'JKING2', '650.555.8880', '2009-03-17', 'SA_REP',35000.00,0,90);
+insert into Employee(Employee_id, First_name, Last_name, Email, Phone_number, Hire_date, Job_id,Salary,Manager_id,Department_id)Values(211, 'Patrick', 'Sully', 'PSULLY2', '650.555.8881', '2009-09-13', 'SA_REP',30000.00,100,90);
+insert into Employee(Employee_id, First_name, Last_name, Email, Phone_number, Hire_date, Job_id,Salary,Manager_id,Department_id)Values(100,'Steven','King','SKING','515.123.4567',2009-09-12,'AD_PRES',24000.00,100,90);
+insert into Employee(Employee_id, First_name, Last_name, Email, Phone_number, Hire_date, Job_id,Salary,Manager_id,Department_id)Values(101,'Neena','Kochhar','NKOCHHAR','515.123.4568',2009-04-15,'AD_VP',17000.00,102,60);
+insert into Employee(Employee_id, First_name, Last_name, Email, Phone_number, Hire_date, Job_id,Salary,Manager_id,Department_id)Values(102,'Lex','De Haan','LDEHAAN','515.123.4569','2009-05-16','AD_VP',18000.00103,60);
+insert into Employee(Employee_id, First_name, Last_name, Email, Phone_number, Hire_date, Job_id,Salary,Manager_id,Department_id)Values(163,'Danielle','Greene','DGREENE','011.44.1346.229268','2009-06-17','SA_REP',95000.00,103,60);
+insert into Employee(Employee_id, First_name, Last_name, Email, Phone_number, Hire_date, Job_id,Salary,Manager_id,Department_id)Values(164,'Mattea','Marvins','MMARVINS','011.44.1346.329268','2009-07-18','SA_REP',72000.00,103,90);
+insert into Employee(Employee_id, First_name, Last_name, Email, Phone_number, Hire_date, Job_id,Salary,Manager_id,Department_id)Values(165,'Sundar','Ande','SANDE','011.44.1346.629268','2009-09-23','SA_REP',64000.00,100,40);
+insert into Employee(Employee_id, First_name, Last_name, Email, Phone_number, Hire_date, Job_id,Salary,Manager_id,Department_id)Values(166,'David','Lee','DLEE','011.44.1346.529268',to_date'2009-08-20','SA_REP',68000.00,101,30);
+insert into Employee(Employee_id, First_name, Last_name, Email, Phone_number, Hire_date, Job_id,Salary,Manager_id,Department_id)Values(139,'John','Seo','JSEO','650.121.2019','2009-10-23','ST_CLERK',27000.00108,90);
+insert into Employee(Employee_id, First_name, Last_name, Email, Phone_number, Hire_date, Job_id,Salary,Manager_id,Department_id)Values(159,'Lindsey','Smith','LSMITH','011.44.1345.729268','2009-12-12','SA_REP',40000.00,104,60);
+insert into Employee(Employee_id, First_name, Last_name, Email, Phone_number, Hire_date, Job_id,Salary,Manager_id,Department_id)Values(121,'Adam','Fripp','AFRIPP','650.123.2234','2009'11'10','ST_MAN',82000.00,102,20);
+insert into Employee(Employee_id, First_name, Last_name, Email, Phone_number, Hire_date, Job_id,Salary,Manager_id,Department_id)Values(169,'Harrison','Bloom','HBLOOM','011.44.1343.829268','2009-09-09','SA_REP',10000.00,104,40);
+insert into Employee(Employee_id, First_name, Last_name, Email, Phone_number, Hire_date, Job_id,Salary,Manager_id,Department_id)Values(183,'Girard','Geoni','GGEONI','650.507.9879','2009-07-09','SH_CLERK',28000.00,120,50);
+insert into Employee(Employee_id, First_name, Last_name, Email, Phone_number, Hire_date, Job_id,Salary,Manager_id,Department_id)Values(109,'Daniel','Faviet','DFAVIET','515.124.4169','2010-09-13','FI_ACCOUNT',40000.00,120,50);
+insert into Employee(Employee_id, First_name, Last_name, Email, Phone_number, Hire_date, Job_id,Salary,Manager_id,Department_id)Values(110,'John','Chen','JCHEN','515.124.4269','2010-08-07','FI_ACCOUNT',82000.00,102,30);
+insert into Employee(Employee_id, First_name, Last_name, Email, Phone_number, Hire_date, Job_id,Salary,Manager_id,Department_id)Values(111,'Ismael','Sciarra','ISCIARRA','515.124.4369','2010-10-10','FI_ACCOUNT',77000.00,101,10);
+insert into Employee(Employee_id, First_name, Last_name, Email, Phone_number, Hire_date, Job_id,Salary,Manager_id,Department_id)Values(112,'Jose Manuel','Urman','JMURMAN','515.124.4469','2010-02-02','FI_ACCOUNT',78000.00,104,40);
+
+
+OUTPUT:
+
+mysql> select *from Employee;
+
++-------------+-------------+-----------+----------+--------------------+------------+------------+----------+------------+---------------+
+| Employee_id | First_name  | Last_name | Email    | Phone_number       | Hire_date  | Job_id     | Salary   | Manager_id | Department_id |
++-------------+-------------+-----------+----------+--------------------+------------+------------+----------+------------+---------------+
+|         100 | Steven      | King      | SKING    | 515.123.4567       | 2009-09-12 | AD_PRES    | 24000.00 |        100 |            90 |
+|         101 | Neena       | Kochhar   | NKOCHHAR | 515.123.4568       | 2009-04-15 | AD_VP      | 17000.00 |        102 |            60 |
+|         102 | Lex         | De Haan   | LDEHAAN  | 515.123.4569       | 2009-05-16 | AD_VP      | 18000.00 |        103 |            60 |
+|         109 | Daniel      | Faviet    | DFAVIET  | 515.124.4169       | 2010-09-13 | FI_ACCOUNT | 40000.00 |        120 |            50 |
+|         110 | John        | Chen      | JCHEN    | 515.124.4269       | 2010-08-07 | FI_ACCOUNT | 82000.00 |        102 |            30 |
+|         111 | Ismael      | Sciarra   | ISCIARRA | 515.124.4369       | 2010-10-10 | FI_ACCOUNT | 77000.00 |        101 |            10 |
+|         112 | Jose Manuel | Urman     | JMURMAN  | 515.124.4469       | 2010-02-02 | FI_ACCOUNT | 78000.00 |        104 |            40 |
+|         121 | Adam        | Fripp     | AFRIPP   | 650.123.2234       | 2009-11-10 | ST_MAN     | 82000.00 |        102 |            20 |
+|         139 | John        | Seo       | JSEO     | 650.121.2019       | 2009-10-23 | ST_CLERK   | 27000.00 |        108 |            90 |
+|         159 | Lindsey     | Smith     | LSMITH   | 011.44.1345.729268 | 2009-12-12 | SA_REP     | 40000.00 |        104 |            60 |
+|         163 | Danielle    | Greene    | DGREENE  | 011.44.1346.229268 | 2009-06-17 | SA_REP     | 95000.00 |        103 |            60 |
+|         164 | Mattea      | Marvins   | MMARVINS | 011.44.1346.329268 | 2009-07-18 | SA_REP     | 72000.00 |        103 |            90 |
+|         165 | Sundar      | Ande      | SANDE    | 011.44.1346.629268 | 2009-09-23 | SA_REP     | 64000.00 |        100 |            40 |
+|         166 | David       | Lee       | DLEE     | 011.44.1346.529268 | 2009-08-20 | SA_REP     | 68000.00 |        101 |            30 |
+|         169 | Harrison    | Bloom     | HBLOOM   | 011.44.1343.829268 | 2009-09-09 | SA_REP     | 10000.00 |        104 |            40 |
+|         183 | Girard      | Geoni     | GGEONI   | 650.507.9879       | 2009-07-09 | SH_CLERK   | 28000.00 |        120 |            50 |
+|         210 | Janette     | King      | JKING2   | 650.555.8880       | 2009-03-17 | SA_REP     | 35000.00 |          0 |            90 |
+|         211 | Patrick     | Sully     | PSULLY2  | 650.555.8881       | 2009-09-13 | SA_REP     | 30000.00 |        100 |            90 |
++-------------+-------------+-----------+----------+--------------------+------------+------------+----------+------------+---------------+
+18 rows in set (0.00 sec)
+
+
+
+- Write a query to display the name ( first name and last name ) for those employees who gets more salary than the employee whose ID is 163
+
+Answer:
+select First_name, Last_name from Employee where Salary > ( select Salary  from Employee where Employee_id=163);
+
++-------------+-----------+
+| First_name  | Last_name |
++-------------+-----------+
+| Neena       | Kochhar   |
+| Lex         | De Haan   |
+| Daniel      | Faviet    |
+| John        | Chen      |
+| Ismael      | Sciarra   |
+| Jose Manuel | Urman     |
+| Adam        | Fripp     |
+| John        | Seo       |
+| Lindsey     | Smith     |
+| Sundar      | Ande      |
+| Girard      | Geoni     |
+| Janette     | King      |
+| Patrick     | Sully     |
++-------------+-----------+
+13 rows in set (0.00 sec)
+
+
+
+- Write a query to display the name ( first name and last name ), salary, department id, job id for those employees who works in the same designation as the employee works whose id is 169.
+
+Answer:
+select First_name, Last_name, Salary, Job_id from Employee where Job_id = (select Job_id  from Employee where Employee_id=169);
+
++------------+-----------+----------+--------+
+| First_name | Last_name | Salary   | Job_id |
++------------+-----------+----------+--------+
+| Lindsey    | Smith     | 40000.00 | SA_REP |
+| Danielle   | Greene    | 20000.00 | SA_REP |
+| Mattea     | Marvins   | 20000.00 | SA_REP |
+| Sundar     | Ande      | 35000.00 | SA_REP |
+| David      | Lee       | 15000.00 | SA_REP |
+| Harrison   | Bloom     | 10000.00 | SA_REP |
+| Janette    | King      | 35000.00 | SA_REP |
+| Patrick    | Sully     | 45000.00 | SA_REP |
++------------+-----------+----------+--------+
+8 rows in set (0.00 sec)
+
+
+Write a query to display the name ( first name and last name ), salary, department id for those employees who earn such amount of salary which is the smallest salary of any of the departments.
+
+Answer:
+select First_name, Last_name, Salary, Department_id  from Employee  where Salary in ( select MIN(salary)  from Employee  group by Department_id );
+
+
++------------+-----------+----------+---------------+
+| First_name | Last_name | Salary   | Department_id |
++------------+-----------+----------+---------------+
+| Harrison   | Bloom     | 10000.00 |          NULL |
++------------+-----------+----------+---------------+
+1 row in set (0.17 sec)
+
+
+Write a query to display the employee id, employee name (first name and last name ) for all employees who earn more than the average salary.
+
+Answer:
+select employee_id, First_name,Last_name  from Employee where salary >  (select AVG(Salary)  from Employee);
+
++-------------+-------------+-----------+
+| employee_id | First_name  | Last_name |
++-------------+-------------+-----------+
+|         109 | Daniel      | Faviet    |
+|         110 | John        | Chen      |
+|         111 | Ismael      | Sciarra   |
+|         112 | Jose Manuel | Urman     |
+|         121 | Adam        | Fripp     |
+|         159 | Lindsey     | Smith     |
+|         211 | Patrick     | Sully     |
++-------------+-------------+-----------+
+7 rows in set (0.07 sec)
+
+
+Write a query to display the employee name ( first name and last name ), employee id and salary of all employees who report to shiva
+
+Answer:
+select First_name, Last_name, Employee_id, salary from Employee where manager_id = (select employee_id  from Employee where first_name = 'Patrick');
+
+Empty set (0.00 sec)
+
+
+Creation of table Department:
+
+create table Department( Department_id int, Department_name varchar(30) ,Manager_id int, Location_id int, PRIMARY KEY (Department_id) );
+
+
+Insertion of values into table Department:
+
+insert into Department values(60,'SALES',201,89);
+insert into Department values(90,'ACCOUNTS',101,89);
+insert into Department values(50,'FINANCE',102,17);
+insert into Department values(30,'FINANCE'101,79);
+insert into Department values(40,'FINANCE'100,89);
+insert into Department values(10,'FINANCE'103,89);
+insert into Department values(20,'ADMIN',120,88);
+
+
+mysql> select * from Department;
+
++---------------+-----------------+------------+-------------+
+| Department_id | Department_name | Manager_id | Location_id |
++---------------+-----------------+------------+-------------+
+|            10 | FINANCE         |        103 |          89 |
+|            20 | ADMIN           |        120 |          88 |
+|            30 | FINANCE         |        101 |          79 |
+|            40 | FINANCE         |        100 |          89 |
+|            50 | FINANCE         |        102 |          17 |
+|            60 | SALES           |        201 |          89 |
+|            90 | ACCOUNTS        |        101 |          89 |
++---------------+-----------------+------------+-------------+
+7 rows in set (0.00 sec)
+
+
+Write a query to display the department number, name ( first name and last name ), job and department name for all employees in the Finance department.
+
+Answer:
+select e.Department_id, e.First_name, e.Job_id , d.Department_name  from Employee e , Department d  where e.Department_id = d.Department_id  and  d.Department_name = 'Finance';
+
++---------------+-------------+------------+-----------------+
+| Department_id | First_name  | Job_id     | Department_name |
++---------------+-------------+------------+-----------------+
+|            50 | Daniel      | FI_ACCOUNT | FINANCE         |
+|            30 | John        | FI_ACCOUNT | FINANCE         |
+|            10 | Ismael      | FI_ACCOUNT | FINANCE         |
+|            40 | Jose Manuel | FI_ACCOUNT | FINANCE         |
+|            40 | Sundar      | SA_REP     | FINANCE         |
+|            30 | David       | SA_REP     | FINANCE         |
+|            40 | Harrison    | SA_REP     | FINANCE         |
+|            50 | Girard      | SH_CLERK   | FINANCE         |
++---------------+-------------+------------+-----------------+
+8 rows in set (0.05 sec)
+
+
+ Write a query to display all the information of an employee whose salary and reporting person id is 30000 and 121 respectively.
+
+Answer:
+select * from Employee where (Salary,Manager_id)=(select 3000,121);
+
+Empty set (0.00 sec)
+
+
+Display all the information of an employee whose id is any of the number 134, 159 and 183.
+
+Answer:
+select * from Employee where Employee_id in (134,159,183);
+
+
++-------------+------------+-----------+--------+--------------------+------------+----------+----------+------------+---------------+
+| Employee_id | First_name | Last_name | Email  | Phone_number       | Hire_date  | Job_id   | Salary   | Manager_id | Department_id |
++-------------+------------+-----------+--------+--------------------+------------+----------+----------+------------+---------------+
+|         159 | Lindsey    | Smith     | LSMITH | 011.44.1345.729268 | 2009-12-12 | SA_REP   | 40000.00 |        104 |            60 |
+|         183 | Girard     | Geoni     | GGEONI | 650.507.9879       | 2009-07-09 | SH_CLERK | 28000.00 |        120 |            50 |
++-------------+------------+-----------+--------+--------------------+------------+----------+----------+------------+---------------+
+2 rows in set (0.08 sec)
+
+
+Write a query to display all the information of the employees whose salary is within the range 10000 and 30000.
+
+Answewr:
+select * from Employee_Details where Salary between 10000 and 30000;
+ 
+
++-------------+------------+-----------+----------+--------------------+------------+----------+----------+------------+---------------+
+| Employee_id | First_name | Last_name | Email    | Phone_number       | Hire_date  | Job_id   | Salary   | Manager_id | Department_id |
++-------------+------------+-----------+----------+--------------------+------------+----------+----------+------------+---------------+
+|         100 | Steven     | King      | SKING    | 515.123.4567       | 2009-09-12 | AD_PRES  | 24000.00 |        100 |            90 |
+|         101 | Neena      | Kochhar   | NKOCHHAR | 515.123.4568       | 2009-04-15 | AD_VP    | 17000.00 |        102 |            60 |
+|         102 | Lex        | De Haan   | LDEHAAN  | 515.123.4569       | 2009-05-16 | AD_VP    | 18000.00 |        103 |            60 |
+|         139 | John       | Seo       | JSEO     | 650.121.2019       | 2009-10-23 | ST_CLERK | 27000.00 |        108 |            90 |
+|         169 | Harrison   | Bloom     | HBLOOM   | 011.44.1343.829268 | 2009-09-09 | SA_REP   | 10000.00 |        104 |            40 |
+|         183 | Girard     | Geoni     | GGEONI   | 650.507.9879       | 2009-07-09 | SH_CLERK | 28000.00 |        120 |            50 |
+|         211 | Patrick    | Sully     | PSULLY2  | 650.555.8881       | 2009-09-13 | SA_REP   | 30000.00 |        100 |            90 |
++-------------+------------+-----------+----------+--------------------+------------+----------+----------+------------+---------------+
+7 rows in set (0.07 sec)
+
+
+ Write a query to display all the information of the employees whose salary is within the range of smallest salary and 25000.
+
+Answer:
+select * from Employee where Salary between  (select min(Salary) from Employee) and 25000;
+
+    
++-------------+------------+-----------+----------+--------------------+------------+---------+----------+------------+---------------+
+| Employee_id | First_name | Last_name | Email    | Phone_number       | Hire_date  | Job_id  | Salary   | Manager_id | Department_id |
++-------------+------------+-----------+----------+--------------------+------------+---------+----------+------------+---------------+
+|         100 | Steven     | King      | SKING    | 515.123.4567       | 2009-09-12 | AD_PRES | 24000.00 |        100 |            90 |
+|         101 | Neena      | Kochhar   | NKOCHHAR | 515.123.4568       | 2009-04-15 | AD_VP   | 17000.00 |        102 |            60 |
+|         102 | Lex        | De Haan   | LDEHAAN  | 515.123.4569       | 2009-05-16 | AD_VP   | 18000.00 |        103 |            60 |
+|         169 | Harrison   | Bloom     | HBLOOM   | 011.44.1343.829268 | 2009-09-09 | SA_REP  | 10000.00 |        104 |            40 |
++-------------+------------+-----------+----------+--------------------+------------+---------+----------+------------+---------------+
+4 rows in set (0.00 sec)
+
+
+
+
+
